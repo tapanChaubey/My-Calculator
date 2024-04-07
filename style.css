@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0; /* Light gray background */
+}
+
+.main {
+    width: 100%; /* Take full width on mobile */
+    max-width: 350px; /* Limit maximum width */
+    height: auto;
+    padding: 25px;
+    border: 20px solid #4CAF50; /* Green border */
+    border-radius: 10px;
+    text-align: center;
+    background-color: white; /* Light gray background */
+}
+
+input {
+    height: 60px; /* Reduced height for mobile */
+    width: calc(100% - 10px); /* Adjusting for padding */
+    margin-bottom: 20px;
+    font-size: 20px; /* Slightly reduced font size for mobile */
+    font-weight: bold;
+    background-color: #555; /* Dark gray input background */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.main div {
+    display: flex;
+    flex-wrap: wrap; /* Ensure buttons wrap on smaller screens */
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+button {
+    flex: 1;
+    font-size: 20px; /* Reduced font size for mobile */
+    height: 60px; /* Reduced height for mobile */
+    border-radius: 50%;
+    background-color: #333; /* Dark gray button background */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+    input {
+        font-size: 16px; /* Further reduced font size for smaller screens */
+    }
+    
+    button {
+        font-size: 16px; /* Further reduced font size for smaller screens */
+    }
+}
