@@ -1,8 +1,10 @@
+/* Universal Reset */
 * {
     margin: 0;
     padding: 0;
 }
 
+/* Flexbox Layout for centering */
 body {
     display: flex;
     justify-content: center;
@@ -11,6 +13,7 @@ body {
     background-color: #f0f0f0; /* Light gray background */
 }
 
+/* Main Container Styling */
 .main {
     width: 100%; /* Take full width on mobile */
     max-width: 350px; /* Limit maximum width */
@@ -22,6 +25,7 @@ body {
     background-color: white; /* Light gray background */
 }
 
+/* Input Styling */
 input {
     height: 60px; /* Reduced height for mobile */
     width: calc(100% - 10px); /* Adjusting for padding */
@@ -36,6 +40,7 @@ input {
     box-sizing: border-box;
 }
 
+/* Div Container within Main */
 .main div {
     display: flex;
     flex-wrap: wrap; /* Ensure buttons wrap on smaller screens */
@@ -43,6 +48,7 @@ input {
     margin-bottom: 10px;
 }
 
+/* Button Styling */
 button {
     flex: 1;
     font-size: 20px; /* Reduced font size for mobile */
@@ -52,14 +58,19 @@ button {
     color: white;
     border: none;
     cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
 }
 
+/* Button Hover Effect */
+button:hover {
+    background-color: #7db580; /* Darken button background on hover */
+}
+
+/* Media Query for smaller screens */
 @media screen and (max-width: 500px) {
-    input {
-        font-size: 16px; /* Further reduced font size for smaller screens */
-    }
-    
+    /* Further reduce font sizes for smaller screens */
+    input,
     button {
-        font-size: 16px; /* Further reduced font size for smaller screens */
+        font-size: 16px;
     }
 }
